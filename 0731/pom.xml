@@ -101,7 +101,8 @@
 			<artifactId>spring-websocket</artifactId>
 			<version>5.1.8.RELEASE</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
+		
+		<!-- STOMP 메세징용 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-messaging</artifactId>

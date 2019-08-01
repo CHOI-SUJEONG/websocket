@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/css/chat.css" />
 </head>
 <body>
-<c:import url="/WEB-INF/template/header.jsp"/>	
+<c:import url="/WEB-INF/template/header.jsp"/>
 <h2 class="title"><i class="far fa-comment-dots"></i> 까까오톡</h2>
 <div id="chattingSection">
 	<div id="chatList">
@@ -39,6 +39,33 @@
 		<!--//#inputChatBox -->
 		</div>
 <c:import url="/WEB-INF/template/footer.jsp"/>
+<script src="/js/jquery.js"></script>
+<script src="/js/underscore-min.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/js/sockjs.min.js"></script>
+<script src="/js/stomp.min.js"></script>
+<script>
+
+	//handshaking(악수)
+	let socket = new SockJS("/chat");
+
+	//STOMP로
+	let stompClient = Stomp.over(socket);
+	
+	//연결
+	stompClient.connect({},function() {
+		console.log("연결됨!");
+	});
+	
+	
+	
+</script>
 </body>
 </html>
+
+
+
+
+
+
     
